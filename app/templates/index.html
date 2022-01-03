@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>{{ imageboard_name }}</h1>
     <div class="news">
         {% for post in news %}
-            <h2>{{ post.title }}</h2>
-            <p>{{ post.body }}</p>
+            <div class="announcement">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.body }}</p>
+            </div>
         {% endfor %}
     </div>
 {% endblock %}

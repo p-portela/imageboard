@@ -1,0 +1,32 @@
+body{
+    background-color: #ebfcff;
+}
+header, h1{
+    text-align: center;
+    color: red;
+}
+
+.news{
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #a5c8c8;
+}
+.announcement{
+    width: 100%;
+}
+.announcement h2{
+    margin: auto;
+    background: #ADDED0;
+}
+.announcement p{
+    margin-top: 20px;
+}
+.announcement p, .announcement h2{
+    padding: 3px 7px;
+}

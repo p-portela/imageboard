@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{# TODO: implement hovering boardlist
+<div class="boardlist">
+     {% for board in boards %}
+         <a href="{{ url_for('board', boardpath=board.boardpath) }}">
+     {% endfor %}
+</div>
+#}
+
+{% block content %}
+    <h1>{{ imageboard_name }}</h1>
+    {% if subtitle %}
+    <p>{{ subtitle }}</p>
+    {% endif %}
+
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag }}
+        <p>
+            {{ form.email.label }}
+            {{ form.email }}
+        </p>
+    </form>
+
+    {# TODO: render posts #}
+
+{% endblock %}

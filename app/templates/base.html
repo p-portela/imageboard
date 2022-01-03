@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    {% if board %}
-    <title>{{ board }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% if boardtitle %}
+        <title>{{ boardtitle }}</title>
     {% else %}
-    <title>{{ imageboard_name }}</title>
+        <title>{{ imageboard_name }}</title>
     {% endif %}
 </head>
 <body>
-    {% block content %}
-        {% if board %}
-            <h1>{{ board }}</h1>
-        {% else %}
-            <h1> {{ imageboard_name }}</h1>
-        {% endif %}
-    {% endblock %}
+{% if boardtitle %}
+    <h1>{{ boardtitle }}</h1>
+{% else %}
+    <h1> {{ imageboard_name }}</h1>
+{% endif %}
+{% block content %}
+{% endblock %}
 </body>
 </html>
