@@ -8,11 +8,6 @@
 #}
 
 {% block content %}
-    <h1>{{ imageboard_name }}</h1>
-    {% if subtitle %}
-    <p>{{ subtitle }}</p>
-    {% endif %}
-
     <form action="" method="post" novalidate>
         {{ form.hidden_tag }}
         <p>

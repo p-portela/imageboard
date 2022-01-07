@@ -21,7 +21,7 @@ def index():
     ]
     return render_template('index.html', imageboard_name=imageboard_name, news=news)
 
-@app.route('/<boardpath>', methods=['GET', 'POST'])
+@app.route('/boardpath', methods=['GET', 'POST'])
 def board(boardpath):
     form = PostForm()
     return render_template('board.html', imageboard_name=imageboard_name, boardtitle=boardtitle, subtitle=subtitle)
