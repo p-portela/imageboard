@@ -1,10 +1,21 @@
 body{
     background-color: #ebfcff;
 }
-header, h1{
+header{
     text-align: center;
-    color: red;
+    margin: auto;
+    padding: 10px;
 }
+
+h1{
+	color: red;
+	margin: auto;
+}
+
+p{
+	margin: auto;
+}
+
 
 .news{
     max-width: 700px;

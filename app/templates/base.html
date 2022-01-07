@@ -10,16 +10,19 @@
     {% endif %}
 </head>
 <body>
-{% if boardtitle %}
-    <h1>{{ boardtitle }}</h1>
-{% else %}
-    <h1> {{ imageboard_name }}</h1>
-{% endif %}
-{% if subtitle %}
-    <p>{{ subtitle }}</p>
-{% endif %}
-<hr>
+	<header>
+	{% if boardtitle %}
+	<h1>/{{ boardpath }}/ - {{ boardtitle }}</h1>
+	{% else %}
+		<h1>{{ imageboard_name }}</h1>
+	{% endif %}
+	{% if subtitle %}
+		<p>{{ subtitle }}</p>
+	{% endif %}
+	</header>
+	<hr>
 {% block content %}
+
 {% endblock %}
 </body>
 </html>

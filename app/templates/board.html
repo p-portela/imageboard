@@ -8,14 +8,16 @@
 #}
 
 {% block content %}
-    <form action="" method="post" novalidate>
-        {{ form.hidden_tag }}
-        <p>
-            {{ form.email.label }}
-            {{ form.email }}
-        </p>
-    </form>
-
-    {# TODO: render posts #}
-
+	<form action="" method="post" novalidate>
+		{{ form.hidden_tag() }}
+		<p>
+			{{ form.email.label }}
+			{{ form.email }}
+		</p>
+	</form>
+	{% for post in posts %}
+		<p>
+			{{ post.id }} - {{ post.body }}
+		</p>
+	{% endfor %}
 {% endblock %}
